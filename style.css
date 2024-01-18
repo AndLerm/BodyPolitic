@@ -53,7 +53,22 @@ header{
 .navlist a{
     font-size: var(--p-font);
     color: var(--text-color);
-    font-weight: 900;
+    font-weight: 500;
     padding: 80px 37px;
+    text-decoration: none;
+}
+
+.navlist a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    bottom: -3px;
+    left: 0;
+    transition: ease-out .50s;
+}
+.navlist a:hover::after{
+    width: 100%;
 }
 /* FINE HEADER*/
